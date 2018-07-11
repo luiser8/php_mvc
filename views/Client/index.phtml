@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PHP</title>
+</head>
+<body>
+	Client View
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>FIRST_NAME</th>
+			<th>LAST_NAME</th>
+			<th>EMAIL</th>
+		</tr>
+		<?php foreach ($instanceClient as $key => $value) { ?>
+		<tr>
+			<td><?php echo $value['id_client']; ?></td>
+			<td><?php echo $value['first_name']; ?></td>
+			<td><?php echo $value['last_name']; ?></td>
+			<td><?php echo $value['email']; ?></td>
+		</tr>
+		<?php } ?>
+	</table>
+</body>
+</html>

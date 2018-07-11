@@ -1,0 +1,18 @@
+<?php 
+require_once 'controllers/ClientController.php';
+	if(!empty($_POST)){
+		$first_name = isset($_POST['first_name']) ? $_POST['first_name'] : '';
+		$last_name = isset($_POST['last_name']) ? $_POST['last_name'] : '';
+		$email = isset($_POST['email']) ? $_POST['email'] : '';
+
+		$client = new ClientController();
+		$client->Create($first_name, $last_name, $email);
+	}
+?>
+<h1>Create Client</h1>
+<form action="" method="post">
+	<input type="text" name="first_name">
+	<input type="text" name="last_name">
+	<input type="text" name="email">
+	<input type="submit" value="guardar">
+</form>
